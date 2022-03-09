@@ -56,6 +56,7 @@ Make sure that the `object_id` is set and not only shows zeroes. Remember the us
 Enter the IP address shown at the end of the Terraform script
 <img src="images/gw/vm-gw2.jpg" height=200>
 When Prompted for Credentials, please click on `More Choices` and then `Use a different account`. Here you can enter the User ID and Password from Step-6.
+If you are prompted with a Security/Certificate Pop-up, please click `yes`. 
 
 
 
