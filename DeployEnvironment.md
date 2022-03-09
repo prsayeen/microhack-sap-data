@@ -1,5 +1,8 @@
+# Objective
+We are now going to setup the Environment with all required Azure Services (Synapse instance, VM for SHIR, Storage Account, Azure ML, etc.). To avoid any manual work, we are using Terraform for the Deployment. 
+
 # Deploy the Microhack environment with Terraform
-To avoid problems we will use Terraform to deploy a new Resource Group, Virtual Network, Subnet and Virtual Machine which will be used as the Gateway server. You can also deploy the Synapse workspace if preferred. If you don't want to deploy the Synapse workspace with Terraform you have to rename or remove the file `Synapse.tf`.
+Terraform will deploy a new Resource Group, Virtual Network, Subnet and Virtual Machine which will be used as the Gateway server. This will also deploy a Synapse workspace by default. If you's rather prefer to use an existing Synapse workspace and do not need a new one created, you can simply rename or remove the file `Synapse.tf`.
 
 To trigger the Terraform deployment, follow the steps below:
 1. Login to Azure cloud shell https://shell.azure.com/
