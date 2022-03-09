@@ -1,7 +1,10 @@
 # Objective
 We are now going to setup the Environment with all required Azure Services (Synapse instance, VM for SHIR, Storage Account, Azure ML, etc.). To avoid any manual work, we are using Terraform for the Deployment. 
 
-# Deploy the Microhack environment with Terraform
+Part 1: Deploy the Microhack environment with Terraform
+Part 2: Install the SAP .Net Connector on the Azure VM running the SHIR 
+
+# Part 1: Deploy the Microhack environment with Terraform
 Terraform will deploy a new Resource Group, Virtual Network, Subnet and Virtual Machine which will be used as the Gateway server. This will also deploy a Synapse workspace by default. If you's rather prefer to use an existing Synapse workspace and do not need a new one created, you can simply rename or remove the file `Synapse.tf`.
 
 To trigger the Terraform deployment, follow the steps below:
@@ -54,11 +57,10 @@ Enter the IP address shown at the end of the Terraform script
 <img src="images/gw/vm-gw2.jpg" height=200>
 
 
-## Prepare
+
+# Part 2: Install the SAP .Net Connector
 In this step, we'll prepare an Azure Virtual Machine to host the Integration Runtime needed by the SAP Table Connector of the Azure Synapse Pipeline.
 We'll also install the SAP .net connector to enable RFC Connectivity to the SAP System.
-
-### Install the SAP .Net Connector
 The downloads can best be done directly to the Gateway VM. The VM uses Internet Explorer by default which demands you to make all the websites trusted one by one. Easiest is to turn off the `IE Enhanced Security Configuration` setting in the `Server Manager` for `Local Server`. Click on `On` marked in the red square as shown in the screenshot.
 
 <img src="images/gw/vm-gw3.jpg">
